@@ -1,0 +1,162 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container do Formulário */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Título H2 Personalizado */
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Gradiente no texto */
+    background: linear-gradient(to right, #2c3e50, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, #2ecc71, #00d2ff);
+    border-radius: 2px;
+}
+
+/* Grupos de Input */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00d2ff;
+    box-shadow: 0 0 8px rgba(0, 210, 255, 0.2);
+}
+
+/* Botões */
+.botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 5px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.btn-cadastrar { background-color: #2ecc71; }
+.btn-alterar { background-color: #f1c40f; color: #333; }
+.btn-limpar { background-color: #e74c3c; }
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Responsividade simples */
+@media (max-width: 400px) {
+    .botoes {
+        grid-template-columns: 1fr;
+    }
+}
+/* Se o campo for obrigatório e estiver vazio ao tentar clicar, ele fica vermelho */
+input:invalid:focus {
+    border: 2px solid #e74c3c;
+}
+
+/* Adiciona um asterisco vermelho via CSS se você quiser indicar visualmente */
+label::after {
+    content: " *";
+    color: red;
+}
+/* Notificação Escondida por padrão */
+.hidden {
+    display: none;
+}
+
+/* Notificação Visível */
+#notificacao {
+    background-color: #ffe5e5;
+    color: #d63031;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #d63031;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Classe de erro para os inputs */
+.input-erro {
+    border: 2px solid #d63031 !important;
+    background-color: #fffafa;
+    animation: shake 0.4s linear; /* Faz o campo tremer */
+}
+
+/* Animação de tremor (Shake) */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
