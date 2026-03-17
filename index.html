@@ -2,29 +2,31 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 1</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Exercício 2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-    <h2>Calculadora de Idade </h2>
-    
-    <div class="input-group">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
+
+<div class="container">
+    <h2>Calculadora de Áreas</h2>
+
+    <label>Escolha a forma:</label>
+    <select id="forma" onchange="mudarFormulario()">
+        <option value="quadrado">Quadrado</option>
+        <option value="retangulo">Retângulo</option>
+        <option value="triangulo">Triângulo</option>
+    </select>
+
+    <div id="inputs">
+        <input type="number" id="base" placeholder="Base (ou Lado)">
+        <input type="number" id="altura" placeholder="Altura" style="display:none;">
     </div>
 
-    <div class="input-group">
-        <label for="dataNascimento">Data de Nascimento:</label>
-        <input type="date" id="dataNascimento">
-    </div>
-
-    <button id="btnCalcular">Calcular Idade</button>
+    <button onclick="calcularArea()">Calcular Área</button>
 
     <div id="resultado"></div>
 </div>
 
-<script src="Bt.js"></script>
+<script src="bt.js"></script>
 </body>
 </html>
