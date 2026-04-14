@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Calculadora de Áreas</h2>
+
+    <label>Escolha a forma:</label>
+    <select id="forma" onchange="mudarFormulario()">
+        <option value="quadrado">Quadrado</option>
+        <option value="retangulo">Retângulo</option>
+        <option value="triangulo">Triângulo</option>
+    </select>
+
+    <div id="inputs">
+        <input type="number" id="base" placeholder="Base (ou Lado)">
+        <input type="number" id="altura" placeholder="Altura" style="display:none;">
+    </div>
+
+    <button onclick="calcularArea()">Calcular Área</button>
+
+    <div id="resultado"></div>
+</div>
+
+<script src="bt.js"></script>
+</body>
+</html>
