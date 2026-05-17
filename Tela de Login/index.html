@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjFSXe8zo9KdkuiGZ1t3FgqTAnfoghjk9pg&s">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="login-container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="email"> E-mail</label>
+                <input type="email" id="email" required placeholder="Seu@email.com">
+                <span id="email-error" class="error-text"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <div class="password-wrapper">
+                <input type="password" id="password" required placeholder="********">
+                <button type="button" id="toggle-password" class="toggle-btn">👁️ </button>
+            </div>
+         </div>
+
+         <div class="button-group">
+            <button type="submit"> Entrar</button>
+            <button type="reset"> Limpar</button>
+            </div>
+
+            <p id="message"></p>
+        </form>
+    </div>
+    
+    <script src="Script.js"></script>
+</body>
+</html>

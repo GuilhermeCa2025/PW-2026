@@ -1,0 +1,110 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #3B1F1F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0%;
+}
+
+.login-container {
+    background-color: #FFCBA4;
+    padding: 2rem;
+    border-radius: 0 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    color: #000000d8;
+    margin-top: 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(0, 0, 0);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #030200;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.input-group input:focus{
+    border-color: #000000;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    background-color: #f8d4d4;
+}
+.password-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-wrapper input{
+    padding-right: 40px;
+}
+.toggle-btn{
+    position: absolute;
+    right: 10px;
+    background: none !important;
+    color: #ae7d32 !important;
+    border: none !important;
+    width: auto !important;
+    padding: 0 !important;
+    cursor: pointer;
+    font-size: 18px;
+}
+.error-text{
+    color: #000000;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #d5a898;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.btn-clear:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
