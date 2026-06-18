@@ -1,0 +1,207 @@
+/* Importação da fonte Poppins para um visual mais moderno e limpo */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a3674; /* Fundo cinza claro clássico de sistemas */
+}
+
+/* Container que centraliza o conteúdo do CRUD */
+.container {
+  width: 90%;
+  max-width: 800px;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Cabeçalho com o título e o botão Incluir lado a lado */
+.header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Botão "Incluir" no topo */
+#new {
+  font-size: 16px;
+  padding: 8px 15px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+#new:hover {
+  background-color: #1a252f;
+}
+
+/* Área da Tabela com scroll caso haja muitos funcionários */
+.divTable {
+  padding: 10px;
+  width: 100%;
+  height:calc(100% - 80px);
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f8f9fa;
+}
+
+tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+td {
+  color: #444;
+  font-size: 15px;
+}
+
+/* Alinhamento dos ícones de Editar e Excluir */
+.acao {
+  width: 80px;
+  text-align: center;
+}
+
+.acao button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Cores dos ícones baseados no Boxicons */
+.acao i {
+  font-size: 20px;
+}
+
+.bx-edit {
+  color: #2980b9; /* Azul para editar */
+}
+
+.bx-trash {
+  color: #c0392b; /* Vermelho para excluir */
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DO MODAL (JANELA FLUTUANTE)
+   ========================================== */
+
+/* Tela de fundo escura que cobre o sistema inteiro */
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Classe ativada pelo JavaScript para fazer o modal aparecer */
+.modal-container.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Caixa branca centralizada do Modal */
+.modal {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.modal input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.modal input:focus {
+  border-color: #2c3e50;
+}
+
+/* Botão "Salvar" dentro do Modal */
+#btnSalvar {
+  margin-top: 25px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #27ae60; /* Verde para salvar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btnSalvar:hover {
+  background-color: #219653;
+}
